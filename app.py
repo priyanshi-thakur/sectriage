@@ -8,34 +8,40 @@ st.set_page_config(page_title="SecTriage | URL & Log Inspector", layout="centere
 st.markdown("""
 <style>
     .block-container { padding-top: 2.5rem; padding-bottom: 2.5rem; max-width: 760px; }
-    h1, h2, h3 { font-weight: 600; letter-spacing: -0.02em; color: #111111; }
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; color: #1B2428; }
+    p, label, .stMarkdown { font-family: "Segoe UI", system-ui, sans-serif; color: #1B2428; }
     .stButton > button {
-        background-color: #111111;
+        background-color: #2C4A52;
         color: #FFFFFF;
-        border: 1px solid #111111;
-        border-radius: 3px;
+        border: 1px solid #2C4A52;
+        border-radius: 4px;
         padding: 0.45rem 1.2rem;
         font-weight: 500;
     }
     .stButton > button:hover {
-        background-color: #333333;
-        border-color: #333333;
+        background-color: #1F353B;
+        border-color: #1F353B;
         color: #FFFFFF;
     }
     .report-box {
-        border: 1px solid #D4D4D4;
+        border-left: 4px solid #2C4A52;
+        border-top: 1px solid #DCE3E5;
+        border-right: 1px solid #DCE3E5;
+        border-bottom: 1px solid #DCE3E5;
         background-color: #FFFFFF;
         padding: 1.2rem;
-        border-radius: 3px;
+        border-radius: 4px;
         margin-top: 1rem;
     }
     .tag {
         display: inline-block;
-        padding: 2px 8px;
-        font-size: 0.8rem;
+        padding: 2px 9px;
+        font-size: 0.78rem;
         font-weight: 600;
-        border: 1px solid #111111;
-        border-radius: 2px;
+        background-color: #E7EFEF;
+        color: #2C4A52;
+        border: 1px solid #B8C9CE;
+        border-radius: 3px;
         text-transform: uppercase;
     }
 </style>
@@ -155,8 +161,8 @@ with tab_url:
             st.markdown(f"""
             <div class="report-box">
                 <span class="tag">{verdict}</span>
-                <h3 style="margin-top: 0.6rem; margin-bottom: 0.2rem;">Risk Score: {score} / 100</h3>
-                <p style="color: #555555; font-size: 0.9rem; margin-bottom: 0;">Extracted Host: <code>{host or 'N/A'}</code></p>
+                <h3 style="margin-top: 0.65rem; margin-bottom: 0.2rem;">Risk Score: {score} / 100</h3>
+                <p style="color: #4E5D63; font-size: 0.9rem; margin-bottom: 0;">Extracted Host: <code>{host or 'N/A'}</code></p>
             </div>
             """, unsafe_allow_html=True)
 
